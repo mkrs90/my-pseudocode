@@ -1,35 +1,35 @@
 # How An Elevator Works
 
-## START
-1. IF button is pressed, travel to the floor the button was pressed on.
+### START 
+- **IF** button has been pressed.
 
-2. Once the elevator reaches the floor it will open the doors
+- **READ** the floor the button was pressed on. 
 
-3. User enters the elevator and makes a selection of which floor they want to travel too.
+- **IF** current floor is less than floor button was pressed on  **INCREMENT** floor by 1 until floor **EQUALS** the floor the button was pressed on.
 
-4. If the floor selected is greater than current floor elevator direction will be set to up. 
-    else it will be set to down. (The elevator will always travel to the furthest call in its current direction)
+- Once floor has been reached - open door
 
-5. Elevator will only move if the door is closed.
+- Wait for input of which floor to travel to.
 
-6. Elevator will rise one floor at a time and open doors once it reaches floor selected by user.    
+- **CALCULATE** **IF** the floor selected is greater than the current floor you are on. **IF** true the direction will be set to travel up. **Else** it will be set to travel down. 
 
-7. while traveling the elevator will stop at all calls that have selected the same direction it is currently going
+- Travel to the furthest call in your current direction **UNTIL** you reaches that floor
+
+- Only move **IF** the door is closed.
+
+- **INCREMENT** one floor at a time **UNTIL** you reach the floor requested. 
+
+- **WHILE** traveling stop at all calls that have selected the same direction you are currently going.
     
-8. Once it has reached the furthest call it will then travel in the opposite direction it was going.
+- Once the furthest call has been reached switch directions.
 
-9. The elevator will answer all car calls matching its direction.
+- Answer all car calls matching new direction.
 
-10. The elevator will continue until it has reached the furthest call of its current direction.
+- Continue **UNTIL** the furthest call has been reached 
 
-11. Repeat until all calls have been handled. 
+- **REPEAT** until all calls have been handled. 
 
-## END
-
-### INIT
-
-Floor array - lists all the floor numbers
-Floor direction - either up or down
+### END - once all car calls have been handled.
 
 
 
