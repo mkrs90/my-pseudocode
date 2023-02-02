@@ -1,13 +1,36 @@
 # How An Elevator Works
 
+## INIT 
+- Up and down button on each floor
+    - directionalBtn
+
+- button inside the elevator that have floor numbers
+    - floorBtn
+
+- An array of floors numbers for the building
+    - floorArray
+
+- door - can be open or closed
+    - doorStatus
+    - doors can be held open or shut early
+    - warning sounds when door has been held open for to long
+
+- display that shows which floor the elevator is on
+    - floorNum
+    - a sound plays when the elevator arrives to specific floor number
+
+
 ### START 
+
 - **IF** button has been pressed.
 
 - **READ** the floor the button was pressed on. 
 
 - **IF** current floor is less than floor button was pressed on  **INCREMENT** floor by 1 until floor **EQUALS** the floor the button was pressed on.
 
-- Once floor has been reached - open door
+- Once the floor has been reached - open door for 10sec then close(**IF** not blocked)
+
+    - **IF** Door is is still open after 10 secs give warning and rerun 10sec timer.
 
 - Wait for input of which floor to travel to.
 
